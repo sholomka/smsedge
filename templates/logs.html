@@ -1,0 +1,27 @@
+{% extends "index.html" %}
+
+{% block title %} Aggregated logs {% endblock %}
+
+{% block content %}
+<table class="table">
+    <thead class="thead-dark">
+    <tr>
+        <th scope="col">#</th>
+        <th scope="col">Country</th>
+        <th scope="col">User name</th>
+        <th scope="col">Created</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for aggregatedLog in aggregatedLogs %}
+        <tr>
+            <th scope="row">{{aggregatedLog.id}}</th>
+            <td>{{aggregatedLog.cnt.cntTitle}}</td>
+            <td>{{aggregatedLog.usr.usrName}}</td>
+            <td>{{aggregatedLog.logCreated}}</td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+
+{% endblock %}

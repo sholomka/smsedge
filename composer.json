@@ -1,0 +1,10 @@
+{
+    "require": {
+        "doctrine/orm": "v2.6.4",
+        "twig/twig": "1.31.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "models\\": "models"}
+    }
+}
